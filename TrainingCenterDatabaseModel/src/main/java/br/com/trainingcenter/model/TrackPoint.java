@@ -6,28 +6,33 @@
 package br.com.trainingcenter.model;
 
 import java.util.Date;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author roger
  */
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class TrackPoint {
     
+    @XmlElement
     private Date Time;
+    @XmlElement
     private double AltitudeMeters;
+    @XmlElement
     private double DistanceMeters;
+    @XmlElement
     private int Cadence;
+    @XmlElement
     private String SensorState;
+    @XmlElement
+    private Position position;
 
     public TrackPoint() {
-    }
-
-    public TrackPoint(Date Time, double AltitudeMeters, double DistanceMeters, int Cadence, String SensorState) {
-        this.Time = Time;
-        this.AltitudeMeters = AltitudeMeters;
-        this.DistanceMeters = DistanceMeters;
-        this.Cadence = Cadence;
-        this.SensorState = SensorState;
     }
 
     /**
@@ -98,6 +103,20 @@ public class TrackPoint {
      */
     public void setSensorState(String SensorState) {
         this.SensorState = SensorState;
+    }
+
+    /**
+     * @return the position
+     */
+    public Position getPosition() {
+        return position;
+    }
+
+    /**
+     * @param position the position to set
+     */
+    public void setPosition(Position position) {
+        this.position = position;
     }
     
     

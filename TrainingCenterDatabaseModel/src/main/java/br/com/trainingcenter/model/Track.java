@@ -7,51 +7,54 @@ package br.com.trainingcenter.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author roger
  */
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Track {
     
-    private List<Track> Tracks = new ArrayList<>();
+    @XmlElement
+    private List<TrackPoint> TrackPoints = new ArrayList<>();
 
     public Track() {
     }
 
-    public Track(List<Track> Tracks) {
-        this.Tracks = Tracks;
-    }
-    
     /**
      * @return the tracks
      */
-    public List<Track> getTracks() {
-        return Tracks;
+    public List<TrackPoint> getTracks() {
+        return TrackPoints;
     }
 
     /**
-     * @param Tracks the tracks to set
+     * @param TrackPoints the tracks to set
      */
-    public void setTracks(List<Track> Tracks) {
-        this.Tracks = Tracks;
+    public void setTracks(List<TrackPoint> TrackPoints) {
+        this.TrackPoints = TrackPoints;
     }
     
     /**
      * Add a track
-     * @param Track to add
+     * @param TrackPoint to add
      */
-    public void addTrack(Track Track){
-        Tracks.add(Track);
+    public void addTrack(TrackPoint TrackPoint){
+        TrackPoints.add(TrackPoint);
     }
     
     /**
      * Changes a track
      * @param index of track to change
-     * @param Track to change
+     * @param TrackPoint to change
      */
-    public void setTrack(int index, Track Track){
-        Tracks.set(index, Track);
+    public void setTrack(int index, TrackPoint TrackPoint){
+        TrackPoints.set(index, TrackPoint);
     }
     
     /**
@@ -59,7 +62,7 @@ public class Track {
      * @param index 
      */
     public void remTrack(int index){
-        Tracks.remove(index);
+        TrackPoints.remove(index);
     }
     
 }

@@ -6,24 +6,28 @@
 package br.com.trainingcenter.model;
 
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author roger
  */
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Activity {
     
+    @XmlAttribute
     private String Sport;
+    @XmlElement
     private int Id;
+    @XmlElement
     private List<Lap> Laps;
 
     public Activity() {
-    }
-
-    public Activity(String Sport, int Id, List<Lap> Laps) {
-        this.Sport = Sport;
-        this.Id = Id;
-        this.Laps = Laps;
     }
 
     /**

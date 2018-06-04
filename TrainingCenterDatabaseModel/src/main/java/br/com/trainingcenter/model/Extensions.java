@@ -5,19 +5,23 @@
  */
 package br.com.trainingcenter.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author roger
  */
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Extensions {
     
+    @XmlElement
     private LX Lx;
 
     public Extensions() {
-    }
-
-    public Extensions(LX Lx) {
-        this.Lx = Lx;
     }
 
     /**

@@ -5,21 +5,25 @@
  */
 package br.com.trainingcenter.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author roger
  */
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Position {
     
+    @XmlElement
     private double LatitudeDegrees;
+    @XmlElement
     private double LongitudeDegrees;
 
     public Position() {
-    }
-
-    public Position(double LatitudeDegrees, double LongitudeDegrees) {
-        this.LatitudeDegrees = LatitudeDegrees;
-        this.LongitudeDegrees = LongitudeDegrees;
     }
 
     /**

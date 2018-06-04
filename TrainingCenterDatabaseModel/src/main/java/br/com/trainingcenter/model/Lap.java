@@ -6,38 +6,44 @@
 package br.com.trainingcenter.model;
 
 import java.util.Date;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author roger
  */
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Lap {
     
+    @XmlAttribute
     private String xmlns;
+    @XmlAttribute
     private Date StartTime;
+    @XmlElement
     private double TotalTimeSeconds;
+    @XmlElement
     private double DistanceMeters;
+    @XmlElement
     private double MaximumSpeed;
+    @XmlElement
     private int Calories;
+    @XmlElement
     private String Intensity;
+    @XmlElement
     private int Cadence;
+    @XmlElement
     private String TriggerMethod;
+    @XmlElement
     private Track Track;
-
+    @XmlElement
+    private Extensions Extensions;
+    
     public Lap() {
-    }
-
-    public Lap(String xmlns, Date StartTime, double TotalTimeSeconds, double DistanceMeters, double MaximumSpeed, int Calories, String Intensity, int Cadence, String TriggerMethod, Track Track) {
-        this.xmlns = xmlns;
-        this.StartTime = StartTime;
-        this.TotalTimeSeconds = TotalTimeSeconds;
-        this.DistanceMeters = DistanceMeters;
-        this.MaximumSpeed = MaximumSpeed;
-        this.Calories = Calories;
-        this.Intensity = Intensity;
-        this.Cadence = Cadence;
-        this.TriggerMethod = TriggerMethod;
-        this.Track = Track;
     }
 
     /**
@@ -178,6 +184,20 @@ public class Lap {
      */
     public void setTrack(Track Track) {
         this.Track = Track;
+    }
+
+    /**
+     * @return the Extensions
+     */
+    public Extensions getExtensions() {
+        return Extensions;
+    }
+
+    /**
+     * @param Extensions the Extensions to set
+     */
+    public void setExtensions(Extensions Extensions) {
+        this.Extensions = Extensions;
     }
     
 }

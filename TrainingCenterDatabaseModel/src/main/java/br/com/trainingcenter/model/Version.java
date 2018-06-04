@@ -5,21 +5,25 @@
  */
 package br.com.trainingcenter.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author roger
  */
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Version {
     
-    private int VersionMajor;
+    @XmlElement
     private int VersionMinor;
+    @XmlElement
+    private int VersionMajor;
 
     public Version() {
-    }
-
-    public Version(int VersionMajor, int VersionMinor) {
-        this.VersionMajor = VersionMajor;
-        this.VersionMinor = VersionMinor;
     }
 
     /**

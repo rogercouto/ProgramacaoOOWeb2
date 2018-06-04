@@ -5,25 +5,34 @@
  */
 package br.com.trainingcenter.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author roger
  */
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Author {
     
+    @XmlAttribute(name = "xmlns:xsi")
+    private String xmlns;
+    @XmlAttribute(name="xsi:type")
+    private String xsiType;
+    @XmlElement
     private String Name;
-    private String LangID;
-    private String PartNumber;
+    @XmlElement
     private Build Build;
+    @XmlElement
+    private String LangID;
+    @XmlElement
+    private String PartNumber;
 
     public Author() {
-    }
-
-    public Author(String Name, String LangID, String PartNumber, Build Build) {
-        this.Name = Name;
-        this.LangID = LangID;
-        this.PartNumber = PartNumber;
-        this.Build = Build;
     }
 
     /**
@@ -80,6 +89,34 @@ public class Author {
      */
     public void setBuild(Build Build) {
         this.Build = Build;
+    }
+
+    /**
+     * @return the xmlns
+     */
+    public String getXmlns() {
+        return xmlns;
+    }
+
+    /**
+     * @param xmlns the xmlns to set
+     */
+    public void setXmlns(String xmlns) {
+        this.xmlns = xmlns;
+    }
+
+    /**
+     * @return the xsiType
+     */
+    public String getXsiType() {
+        return xsiType;
+    }
+
+    /**
+     * @param xsiType the xsiType to set
+     */
+    public void setXsiType(String xsiType) {
+        this.xsiType = xsiType;
     }
     
 }

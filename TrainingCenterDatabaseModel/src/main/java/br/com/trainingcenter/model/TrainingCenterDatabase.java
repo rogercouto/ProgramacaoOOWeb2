@@ -6,6 +6,8 @@
 package br.com.trainingcenter.model;
 
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -15,19 +17,17 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author roger
  */
 @XmlRootElement
-public class TraningCenterDatabase {
+@XmlAccessorType(XmlAccessType.FIELD)
+public class TrainingCenterDatabase {
     
+    @XmlAttribute
     private String xmlns;
+    @XmlElement
     private Author Author;
+    @XmlElement
     private List<Activity> Activities;
 
-    public TraningCenterDatabase() {
-    }
-
-    public TraningCenterDatabase(String xmlns, Author Author, List<Activity> Activity) {
-        this.xmlns = xmlns;
-        this.Author = Author;
-        this.Activities = Activity;
+    public TrainingCenterDatabase() {
     }
 
     /**
@@ -40,7 +40,6 @@ public class TraningCenterDatabase {
     /**
      * @param xmlns the xmlns to set
      */
-    @XmlAttribute
     public void setXmlns(String xmlns) {
         this.xmlns = xmlns;
     }
@@ -55,7 +54,6 @@ public class TraningCenterDatabase {
     /**
      * @param Author the Author to set
      */
-    @XmlElement
     public void setAuthor(Author Author) {
         this.Author = Author;
     }
@@ -70,7 +68,6 @@ public class TraningCenterDatabase {
     /**
      * @param Activities the Activity to set
      */
-    @XmlElement
     public void setActivities(List<Activity> Activities) {
         this.Activities = Activities;
     }
