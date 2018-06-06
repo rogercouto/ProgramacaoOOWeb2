@@ -22,10 +22,27 @@ public class TrainingCenterDatabase {
     private Activities activities;
     @XmlElement(name="Author")
     private Author author;
+//    @XmlElement(name="Lap")
+//    private Lap lap;
 
     public TrainingCenterDatabase() {
     }
 
+//     /**
+//     * @return the Lap
+//     */
+//    public Lap getLap(){
+//        return lap;
+//    }
+//    
+//    
+//    /**
+//     * @param Lap the Lap to set
+//     */
+//    public void setLap(Lap Lap) {
+//        this.lap = Lap;
+//    }
+    
     /**
      * @return the Author
      */
