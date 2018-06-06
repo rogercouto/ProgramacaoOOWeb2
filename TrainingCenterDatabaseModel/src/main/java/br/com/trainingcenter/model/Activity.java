@@ -27,6 +27,10 @@ public class Activity {
     private Date id;
     @XmlElement(name="Lap")
     private List<Lap> laps;
+    @XmlElement(name="Training")
+    private Training training;
+    @XmlElement(name="Creator")        
+    private Creator creator;
 
     public Activity() {
     }
@@ -93,6 +97,34 @@ public class Activity {
      */
     public void remLap(int index){
         laps.remove(index);
+    }
+
+    /**
+     * @return the training
+     */
+    public Training getTraining() {
+        return training;
+    }
+
+    /**
+     * @param training the training to set
+     */
+    public void setTraining(Training training) {
+        this.training = training;
+    }
+
+    /**
+     * @return the creator
+     */
+    public Creator getCreator() {
+        return creator;
+    }
+
+    /**
+     * @param creator the creator to set
+     */
+    public void setCreator(Creator creator) {
+        this.creator = creator;
     }
     
 }
