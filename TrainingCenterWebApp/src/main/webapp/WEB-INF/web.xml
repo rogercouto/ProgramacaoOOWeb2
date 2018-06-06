@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee                   http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>OlaMundoWS</servlet-name>
+        <servlet-class>br.com.trainingcenter.ws.impl.OlaMundoWSImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OlaMundoWS</servlet-name>
+        <url-pattern>/OlaMundoWS/</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>TrainingCenterDatabaseWS</servlet-name>
+        <servlet-class>br.com.trainingcenter.ws.impl.TrainingCenterDatabaseWSImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TrainingCenterDatabaseWS</servlet-name>
+        <url-pattern>/TrainingCenterDatabaseWS/</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RotaWS</servlet-name>
+        <servlet-class>br.com.trainingcenter.ws.impl.RotaWSImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RotaWS</servlet-name>
+        <url-pattern>/Rota/</url-pattern>
+    </servlet-mapping>
+    <display-name>Archetype Created Web Application</display-name>
+</web-app>
