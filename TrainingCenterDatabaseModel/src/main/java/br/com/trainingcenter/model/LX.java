@@ -19,40 +19,24 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LX {
     
-    @XmlAttribute
-    private String xmlns;
-    @XmlElement
-    private double AvgSpeed;
+    @XmlElement(name="AvgSpeed")
+    private double avgSpeed;
 
     public LX() {
-    }
-
-    /**
-     * @return the xmlns
-     */
-    public String getXmlns() {
-        return xmlns;
-    }
-
-    /**
-     * @param xmlns the xmlns to set
-     */
-    public void setXmlns(String xmlns) {
-        this.xmlns = xmlns;
     }
 
     /**
      * @return the avgString
      */
     public double getAvgSpeed() {
-        return AvgSpeed;
+        return avgSpeed;
     }
 
     /**
      * @param AvgSpeed the avgString to set
      */
     public void setAvgSpeed(double AvgSpeed) {
-        this.AvgSpeed = AvgSpeed;
+        this.avgSpeed = AvgSpeed;
     }
     
 }

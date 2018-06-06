@@ -19,17 +19,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TrackPoint {
     
-    @XmlElement
-    private Date Time;
-    @XmlElement
-    private double AltitudeMeters;
-    @XmlElement
-    private double DistanceMeters;
-    @XmlElement
-    private int Cadence;
-    @XmlElement
-    private String SensorState;
-    @XmlElement
+    @XmlElement(name="Time")
+    private Date time;
+    @XmlElement(name="AltitudeMeters")
+    private double altitudeMeters;
+    @XmlElement(name="DistanceMeters")
+    private double distanceMeters;
+    @XmlElement(name="Cadence")
+    private int cadence;
+    @XmlElement(name="SensorState")
+    private String sensorState;
+    @XmlElement(name="Position")
     private Position position;
 
     public TrackPoint() {
@@ -39,70 +39,70 @@ public class TrackPoint {
      * @return the Time
      */
     public Date getTime() {
-        return Time;
+        return time;
     }
 
     /**
      * @param Time the Time to set
      */
     public void setTime(Date Time) {
-        this.Time = Time;
+        this.time = Time;
     }
 
     /**
      * @return the AltitudeMeters
      */
     public double getAltitudeMeters() {
-        return AltitudeMeters;
+        return altitudeMeters;
     }
 
     /**
      * @param AltitudeMeters the AltitudeMeters to set
      */
     public void setAltitudeMeters(double AltitudeMeters) {
-        this.AltitudeMeters = AltitudeMeters;
+        this.altitudeMeters = AltitudeMeters;
     }
 
     /**
      * @return the DistanceMeters
      */
     public double getDistanceMeters() {
-        return DistanceMeters;
+        return distanceMeters;
     }
 
     /**
      * @param DistanceMeters the DistanceMeters to set
      */
     public void setDistanceMeters(double DistanceMeters) {
-        this.DistanceMeters = DistanceMeters;
+        this.distanceMeters = DistanceMeters;
     }
 
     /**
      * @return the Cadence
      */
     public int getCadence() {
-        return Cadence;
+        return cadence;
     }
 
     /**
      * @param Cadence the Cadence to set
      */
     public void setCadence(int Cadence) {
-        this.Cadence = Cadence;
+        this.cadence = Cadence;
     }
 
     /**
      * @return the SensorState
      */
     public String getSensorState() {
-        return SensorState;
+        return sensorState;
     }
 
     /**
      * @param SensorState the SensorState to set
      */
     public void setSensorState(String SensorState) {
-        this.SensorState = SensorState;
+        this.sensorState = SensorState;
     }
 
     /**

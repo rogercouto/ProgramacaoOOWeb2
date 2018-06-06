@@ -5,6 +5,7 @@
  */
 package br.com.trainingcenter.model;
 
+import java.util.Date;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -20,12 +21,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Activity {
     
-    @XmlAttribute
-    private String Sport;
-    @XmlElement
-    private int Id;
-    @XmlElement
-    private List<Lap> Laps;
+    @XmlAttribute(name="Sport")
+    private String sport;
+    @XmlElement(name="Id")
+    private Date id;
+    @XmlElement(name="Lap")
+    private List<Lap> laps;
 
     public Activity() {
     }
@@ -34,49 +35,49 @@ public class Activity {
      * @return the Sport
      */
     public String getSport() {
-        return Sport;
+        return sport;
     }
 
     /**
      * @param Sport the Sport to set
      */
     public void setSport(String Sport) {
-        this.Sport = Sport;
+        this.sport = Sport;
     }
 
     /**
      * @return the Id
      */
-    public int getId() {
-        return Id;
+    public Date getId() {
+        return id;
     }
 
     /**
      * @param Id the Id to set
      */
-    public void setId(int Id) {
-        this.Id = Id;
+    public void setId(Date Id) {
+        this.id = Id;
     }
 
     /**
      * @return the Laps
      */
     public List<Lap> getLaps() {
-        return Laps;
+        return laps;
     }
 
     /**
      * @param Laps the Laps to set
      */
     public void setLaps(List<Lap> Laps) {
-        this.Laps = Laps;
+        this.laps = Laps;
     }
     
     /**
      * @param Lap to add
      */
     public void addLap(Lap Lap){
-        Laps.add(Lap);
+        laps.add(Lap);
     }
     
     /**
@@ -84,14 +85,14 @@ public class Activity {
      * @param Lap to change
      */
     public void setLap(int index, Lap Lap){
-        Laps.set(index, Lap);
+        laps.set(index, Lap);
     }
     
     /**
      * @param index of Lap to remove
      */
     public void remLap(int index){
-        Laps.remove(index);
+        laps.remove(index);
     }
     
 }

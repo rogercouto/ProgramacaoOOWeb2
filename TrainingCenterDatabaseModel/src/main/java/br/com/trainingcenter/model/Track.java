@@ -20,8 +20,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Track {
     
-    @XmlElement
-    private List<TrackPoint> TrackPoints = new ArrayList<>();
+    @XmlElement(name="TrackPoint")
+    private List<TrackPoint> trackPoints = new ArrayList<>();
 
     public Track() {
     }
@@ -30,14 +30,14 @@ public class Track {
      * @return the tracks
      */
     public List<TrackPoint> getTracks() {
-        return TrackPoints;
+        return trackPoints;
     }
 
     /**
      * @param TrackPoints the tracks to set
      */
     public void setTracks(List<TrackPoint> TrackPoints) {
-        this.TrackPoints = TrackPoints;
+        this.trackPoints = TrackPoints;
     }
     
     /**
@@ -45,7 +45,7 @@ public class Track {
      * @param TrackPoint to add
      */
     public void addTrack(TrackPoint TrackPoint){
-        TrackPoints.add(TrackPoint);
+        trackPoints.add(TrackPoint);
     }
     
     /**
@@ -54,7 +54,7 @@ public class Track {
      * @param TrackPoint to change
      */
     public void setTrack(int index, TrackPoint TrackPoint){
-        TrackPoints.set(index, TrackPoint);
+        trackPoints.set(index, TrackPoint);
     }
     
     /**
@@ -62,7 +62,7 @@ public class Track {
      * @param index 
      */
     public void remTrack(int index){
-        TrackPoints.remove(index);
+        trackPoints.remove(index);
     }
     
 }

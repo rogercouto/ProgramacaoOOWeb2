@@ -20,100 +20,84 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Lap {
     
-    @XmlAttribute
-    private String xmlns;
-    @XmlAttribute
-    private Date StartTime;
-    @XmlElement
-    private double TotalTimeSeconds;
-    @XmlElement
-    private double DistanceMeters;
-    @XmlElement
-    private double MaximumSpeed;
-    @XmlElement
+    @XmlAttribute(name="StartTime")
+    private Date startTime;
+    @XmlElement(name="TotalTimeSeconds")
+    private double totalTimeSeconds;
+    @XmlElement(name="DistanceMeters")
+    private double distanceMeters;
+    @XmlElement(name="MaximumSpeed")
+    private double maximumSpeed;
+    @XmlElement(name="Calories")
     private int Calories;
-    @XmlElement
-    private String Intensity;
-    @XmlElement
-    private int Cadence;
-    @XmlElement
-    private String TriggerMethod;
-    @XmlElement
-    private Track Track;
-    @XmlElement
-    private Extensions Extensions;
+    @XmlElement(name="Intensity")
+    private String intensity;
+    @XmlElement(name="cadence")
+    private int cadence;
+    @XmlElement(name="triggerMethod")
+    private String triggerMethod;
+    @XmlElement(name="track")
+    private Track track;
+    @XmlElement(name="Extensions")
+    private Extensions extensions;
     
     public Lap() {
-    }
-
-    /**
-     * @return the xmlns
-     */
-    public String getXmlns() {
-        return xmlns;
-    }
-
-    /**
-     * @param xmlns the xmlns to set
-     */
-    public void setXmlns(String xmlns) {
-        this.xmlns = xmlns;
     }
 
     /**
      * @return the StartTime
      */
     public Date getStartTime() {
-        return StartTime;
+        return startTime;
     }
 
     /**
      * @param StartTime the StartTime to set
      */
     public void setStartTime(Date StartTime) {
-        this.StartTime = StartTime;
+        this.startTime = StartTime;
     }
 
     /**
      * @return the TotalTimeSeconds
      */
     public double getTotalTimeSeconds() {
-        return TotalTimeSeconds;
+        return totalTimeSeconds;
     }
 
     /**
      * @param TotalTimeSeconds the TotalTimeSeconds to set
      */
     public void setTotalTimeSeconds(double TotalTimeSeconds) {
-        this.TotalTimeSeconds = TotalTimeSeconds;
+        this.totalTimeSeconds = TotalTimeSeconds;
     }
 
     /**
      * @return the DistanceMeters
      */
     public double getDistanceMeters() {
-        return DistanceMeters;
+        return distanceMeters;
     }
 
     /**
      * @param DistanceMeters the DistanceMeters to set
      */
     public void setDistanceMeters(double DistanceMeters) {
-        this.DistanceMeters = DistanceMeters;
+        this.distanceMeters = DistanceMeters;
     }
 
     /**
      * @return the MaximumSpeed
      */
     public double getMaximumSpeed() {
-        return MaximumSpeed;
+        return maximumSpeed;
     }
 
     /**
      * @param MaximumSpeed the MaximumSpeed to set
      */
     public void setMaximumSpeed(double MaximumSpeed) {
-        this.MaximumSpeed = MaximumSpeed;
+        this.maximumSpeed = MaximumSpeed;
     }
 
     /**
@@ -134,70 +118,70 @@ public class Lap {
      * @return the Intensity
      */
     public String getIntensity() {
-        return Intensity;
+        return intensity;
     }
 
     /**
      * @param Intensity the Intensity to set
      */
     public void setIntensity(String Intensity) {
-        this.Intensity = Intensity;
+        this.intensity = Intensity;
     }
 
     /**
      * @return the Cadence
      */
     public int getCadence() {
-        return Cadence;
+        return cadence;
     }
 
     /**
      * @param Cadence the Cadence to set
      */
     public void setCadence(int Cadence) {
-        this.Cadence = Cadence;
+        this.cadence = Cadence;
     }
 
     /**
      * @return the TriggerMethod
      */
     public String getTriggerMethod() {
-        return TriggerMethod;
+        return triggerMethod;
     }
 
     /**
      * @param TriggerMethod the TriggerMethod to set
      */
     public void setTriggerMethod(String TriggerMethod) {
-        this.TriggerMethod = TriggerMethod;
+        this.triggerMethod = TriggerMethod;
     }
 
     /**
      * @return the Track
      */
     public Track getTrack() {
-        return Track;
+        return track;
     }
 
     /**
      * @param Track the Track to set
      */
     public void setTrack(Track Track) {
-        this.Track = Track;
+        this.track = Track;
     }
 
     /**
      * @return the Extensions
      */
     public Extensions getExtensions() {
-        return Extensions;
+        return extensions;
     }
 
     /**
      * @param Extensions the Extensions to set
      */
     public void setExtensions(Extensions Extensions) {
-        this.Extensions = Extensions;
+        this.extensions = Extensions;
     }
     
 }

@@ -5,10 +5,8 @@
  */
 package br.com.trainingcenter.model;
 
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -16,60 +14,44 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author roger
  */
-@XmlRootElement
+@XmlRootElement(name="TrainingCenterDatabase")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TrainingCenterDatabase {
     
-    @XmlAttribute
-    private String xmlns;
-    @XmlElement
-    private Author Author;
-    @XmlElement
-    private List<Activity> Activities;
+    @XmlElement(name="Activities")
+    private Activities activities;
+    @XmlElement(name="Author")
+    private Author author;
 
     public TrainingCenterDatabase() {
-    }
-
-    /**
-     * @return the xmlns
-     */
-    public String getXmlns() {
-        return xmlns;
-    }
-
-    /**
-     * @param xmlns the xmlns to set
-     */
-    public void setXmlns(String xmlns) {
-        this.xmlns = xmlns;
     }
 
     /**
      * @return the Author
      */
     public Author getAuthor() {
-        return Author;
+        return author;
     }
 
     /**
      * @param Author the Author to set
      */
     public void setAuthor(Author Author) {
-        this.Author = Author;
+        this.author = Author;
     }
 
     /**
      * @return the Activity
      */
-    public List<Activity> getActivities() {
-        return Activities;
+    public Activities getActivities() {
+        return activities;
     }
 
     /**
      * @param Activities the Activity to set
      */
-    public void setActivities(List<Activity> Activities) {
-        this.Activities = Activities;
+    public void setActivities(Activities Activities) {
+        this.activities = Activities;
     }
     
     

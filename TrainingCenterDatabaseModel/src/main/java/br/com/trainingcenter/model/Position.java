@@ -18,10 +18,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Position {
     
-    @XmlElement
-    private double LatitudeDegrees;
-    @XmlElement
-    private double LongitudeDegrees;
+    @XmlElement(name="LatitudeDegrees")
+    private double latitudeDegrees;
+    @XmlElement(name="LongitudeDegrees")
+    private double longitudeDegrees;
 
     public Position() {
     }
@@ -30,28 +30,28 @@ public class Position {
      * @return the LatitudeDegrees
      */
     public double getLatitudeDegrees() {
-        return LatitudeDegrees;
+        return latitudeDegrees;
     }
 
     /**
      * @param LatitudeDegrees the LatitudeDegrees to set
      */
     public void setLatitudeDegrees(double LatitudeDegrees) {
-        this.LatitudeDegrees = LatitudeDegrees;
+        this.latitudeDegrees = LatitudeDegrees;
     }
 
     /**
      * @return the LongitudeDegrees
      */
     public double getLongitudeDegrees() {
-        return LongitudeDegrees;
+        return longitudeDegrees;
     }
 
     /**
      * @param LongitudeDegrees the LongitudeDegrees to set
      */
     public void setLongitudeDegrees(double LongitudeDegrees) {
-        this.LongitudeDegrees = LongitudeDegrees;
+        this.longitudeDegrees = LongitudeDegrees;
     }
     
 }

@@ -19,18 +19,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Author {
     
-    @XmlAttribute(name = "xmlns:xsi")
-    private String xmlns;
-    @XmlAttribute(name="xsi:type")
-    private String xsiType;
-    @XmlElement
-    private String Name;
-    @XmlElement
-    private Build Build;
-    @XmlElement
-    private String LangID;
-    @XmlElement
-    private String PartNumber;
+    @XmlElement(name="Name")
+    private String name;
+    @XmlElement(name="Build")
+    private Build build;
+    @XmlElement(name="LangID")
+    private String langID;
+    @XmlElement(name="PartNumber")
+    private String partNumber;
 
     public Author() {
     }
@@ -39,84 +35,56 @@ public class Author {
      * @return the Name
      */
     public String getName() {
-        return Name;
+        return name;
     }
 
     /**
      * @param Name the Name to set
      */
     public void setName(String Name) {
-        this.Name = Name;
+        this.name = Name;
     }
 
     /**
      * @return the LangID
      */
     public String getLangID() {
-        return LangID;
+        return langID;
     }
 
     /**
      * @param LangID the LangID to set
      */
     public void setLangID(String LangID) {
-        this.LangID = LangID;
+        this.langID = LangID;
     }
 
     /**
      * @return the PartNumber
      */
     public String getPartNumber() {
-        return PartNumber;
+        return partNumber;
     }
 
     /**
      * @param PartNumber the PartNumber to set
      */
     public void setPartNumber(String PartNumber) {
-        this.PartNumber = PartNumber;
+        this.partNumber = PartNumber;
     }
 
     /**
      * @return the Build
      */
     public Build getBuild() {
-        return Build;
+        return build;
     }
 
     /**
      * @param Build the Build to set
      */
     public void setBuild(Build Build) {
-        this.Build = Build;
-    }
-
-    /**
-     * @return the xmlns
-     */
-    public String getXmlns() {
-        return xmlns;
-    }
-
-    /**
-     * @param xmlns the xmlns to set
-     */
-    public void setXmlns(String xmlns) {
-        this.xmlns = xmlns;
-    }
-
-    /**
-     * @return the xsiType
-     */
-    public String getXsiType() {
-        return xsiType;
-    }
-
-    /**
-     * @param xsiType the xsiType to set
-     */
-    public void setXsiType(String xsiType) {
-        this.xsiType = xsiType;
+        this.build = Build;
     }
     
 }

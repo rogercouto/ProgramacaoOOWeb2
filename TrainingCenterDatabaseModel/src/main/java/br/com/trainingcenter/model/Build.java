@@ -18,8 +18,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Build {
     
-    @XmlElement
-    private Version Version;
+    @XmlElement(name="Version")
+    private Version version;
 
     public Build() {
     }
@@ -28,14 +28,14 @@ public class Build {
      * @return the Version
      */
     public Version getVersion() {
-        return Version;
+        return version;
     }
 
     /**
      * @param Version the Version to set
      */
     public void setVersion(Version Version) {
-        this.Version = Version;
+        this.version = Version;
     }
     
 }

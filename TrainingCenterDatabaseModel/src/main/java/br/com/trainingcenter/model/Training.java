@@ -16,27 +16,26 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Extensions {
+public class Training {
     
-    @XmlElement(name="Lx")
-    private LX lx;
+    @XmlElement(name="Plan")
+    private Plan plan;
 
-    public Extensions() {
+    public Training() {
     }
 
     /**
-     * @return the lx
+     * @return the plan
      */
-    public LX getLx() {
-        return lx;
+    public Plan getPlan() {
+        return plan;
     }
 
     /**
-     * @param Lx the lx to set
+     * @param plan the plan to set
      */
-    public void setLx(LX Lx) {
-        this.lx = Lx;
+    public void setPlan(Plan plan) {
+        this.plan = plan;
     }
-    
     
 }
