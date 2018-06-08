@@ -20,7 +20,7 @@ import javax.jws.WebService;
 @WebService(endpointInterface="br.com.trainingcenter.ws.RotaWS", serviceName="RotaWS")
 public class RotaWSImpl {
 
-        private final TrainingCenterDAO DAO = new TrainingCenterDAO("/home/roger/GIT/ProgramacaoOOWeb2/TrainingCenterWebApp/rota2.tcx");
+        private final TrainingCenterDAO DAO = new TrainingCenterDAO("C:\\rota2.tcx");
         private final TrainingCenterDatabase DB = DAO.unmarshall();
         
 	public String horaIni(){
