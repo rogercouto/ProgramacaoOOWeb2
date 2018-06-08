@@ -7,7 +7,6 @@ import br.com.trainingcenter.model.TrainingCenterDatabase;
 import br.com.trainingcenter.model.dao.TrainingCenterDAO;
 import br.com.trainingcenter.model.res.LapDist;
 import br.com.trainingcenter.model.res.LapDur;
-import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
@@ -20,7 +19,7 @@ import javax.jws.WebService;
 @WebService(endpointInterface="br.com.trainingcenter.ws.RotaWS", serviceName="RotaWS")
 public class RotaWSImpl {
 
-        private final TrainingCenterDAO DAO = new TrainingCenterDAO("C:\\rota2.tcx");
+        private final TrainingCenterDAO DAO = new TrainingCenterDAO("C:\\rota1.tcx");
         private final TrainingCenterDatabase DB = DAO.unmarshall();
         
 	public String horaIni(){
