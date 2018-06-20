@@ -7,9 +7,9 @@ import br.com.trainingcenter.model.res.LapDur;
 import java.util.Date;
 import java.util.List;
 import javax.jws.WebMethod;
-import javax.jws.WebParam;
 import javax.jws.WebResult;
 import javax.jws.WebService;
+import javax.ws.rs.QueryParam;
 
 @WebService
 public interface RotaWS {
@@ -44,5 +44,6 @@ public interface RotaWS {
         
         @WebMethod(operationName="tracksDaLap")
         @WebResult(name="track")
-        public Track getTrack(@WebParam(name="StartTime")Date startTime);
+        public Track getTrack(@QueryParam("StartTime")Date startTime);
+        
 }
